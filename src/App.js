@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import "./App.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "./pages/App.module.scss";
+import "./App.mondule.scss";
+import styles from "../src/Navbar.module.scss";
 import { Navbar, Nav, Container } from "react-bootstrap/";
 
 // Pages
@@ -13,15 +14,16 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar className={styles.km_navbar} expand="md" bg="light">
-          <Container>
-            <Navbar href="/">Kayte McDonough</Navbar>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Container>
+        <Navbar className={styles.km_whole_navbar} expand="md" >
+          <Container className={styles.km_navbar}>
+            <Navbar  href="/">Kayte McDonough</Navbar>
+            <Navbar.Toggle className={styles.km_toggle} aria-controls="basic-navbar-nav" />
             <Navbar.Collapse
-              className="justify-content-end"
+              className={styles.km_collapse}
               id="basic-navbar-nav"
             >
-              <Nav className="mr-auto">
+              <Nav className={styles.km_nav}>
                 <Nav.Item>
                   <Nav.Link href="/">Home</Nav.Link>
                 </Nav.Item>
@@ -35,11 +37,13 @@ function App() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        </Container>
       </BrowserRouter>
     </div>
   );

@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+// .km_navbar {
+//   background-color: rgb(126, 128, 0);
+// }
+@media (min-width: 576px){
+    #root > div > div{
+    max-width: 1920px;
+}
+}
