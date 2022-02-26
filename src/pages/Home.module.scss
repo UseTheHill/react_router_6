@@ -1,5 +1,8 @@
 @import "../variables.scss";
-
+body {
+  position: relative;
+  padding-top: 50px;
+}
 .home_div {
   background-color: orange;
 }
