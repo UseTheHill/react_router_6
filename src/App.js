@@ -1,6 +1,7 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import "./App.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./pages/App.module.scss";
 import { Navbar, Nav, Container } from "react-bootstrap/";
 
 // Pages
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar expand="md" bg="light">
+        <Navbar className={styles.km_navbar} expand="md" bg="light">
           <Container>
             <Navbar href="/">Kayte McDonough</Navbar>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
