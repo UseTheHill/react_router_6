@@ -2,12 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import "./App.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.mondule.scss";
-import styles from "../src/Navbar.module.scss";
-import { Navbar, Nav, Container } from "react-bootstrap/";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {faKeyboard}  from '@fortawesome/free-solid-svg-icons';
+
+// import { Container } from "react-bootstrap/";
 
 // Pages
+import Navbar from "./Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
@@ -15,14 +14,12 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <div className="App">
+      {/* <Container> */}
+      <Navbar />
       <BrowserRouter>
-        <Container>
-          <Navbar className={styles.km_navbar} expand="md">
+        {/* <Navbar className={styles.km_navbar} expand="md">
             <Navbar href="/">Kayte McDonough</Navbar>
             <Navbar.Toggle aria-controls="basic-navbar-nav">
-              {/* <span>
-              <FontAwesomeIcon icon={fa-solid fa-keyboard} />
-              </span> */}
             </Navbar.Toggle>
             <Navbar.Collapse
               className={styles.km_collapse}
@@ -40,15 +37,15 @@ function App() {
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>
-          </Navbar>
+          </Navbar> */}
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </BrowserRouter>
+      {/* </Container> */}
     </div>
   );
 }
