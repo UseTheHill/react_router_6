@@ -1,11 +1,11 @@
 @import "../variables.scss";
-body {
-  position: relative;
+.home_container {
+  height: 100%;
+}
+
+.home_row1 {
+  justify-content: center;
+  color: $text1;
+  font-size: 3rem;
   padding-top: 50px;
-}
-.home_div {
-  background-color: orange;
-}
-.h1 {
-  color: white;
 }

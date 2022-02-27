@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.mondule.scss";
 // import "./Navbar.module.scss";
 import React, { useState, useEffect } from "react";
-// import { Container } from "react-bootstrap/";
+import { Container, Navbar, Nav } from "react-bootstrap/";
 
 // Pages
 // import Navbar from "./Navbar";
@@ -13,28 +13,48 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 function App() {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // const [toggleMenu, setToggleMenu] = useState(false);
+  // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  const toggleNav = () => {
-    setToggleMenu(!toggleMenu);
-  };
+  // const toggleNav = () => {
+  //   setToggleMenu(!toggleMenu);
+  // };
 
-  useEffect(() => {
-    const changeWidth = () => {
-      setScreenWidth(window.innerWidth);
-    };
+  // useEffect(() => {
+  //   const changeWidth = () => {
+  //     setScreenWidth(window.innerWidth);
+  //   };
 
-    window.addEventListener("resize", changeWidth);
+  //   window.addEventListener("resize", changeWidth);
 
-    return () => {
-      window.removeEventListener("resize", changeWidth);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", changeWidth);
+  //   };
+  // }, []);
 
   return (
     <div className="App">
+      <Navbar bg="dark" variant="dark" expand="md">
+        <Container>
+          <Navbar.Brand href="#home">Kayte</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/">About</Nav.Link>
+              <Nav.Link href="/projects">Projects</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter> 
+      {/* <BrowserRouter>
         <nav>
           {(toggleMenu || screenWidth > 500) && (
             <ul className="list">
@@ -64,7 +84,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
