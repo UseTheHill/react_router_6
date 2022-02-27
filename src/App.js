@@ -34,12 +34,12 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar bg="dark" variant="dark" expand="md">
+      <Navbar bg="dark" variant="dark" expand="sm">
         <Container>
           <Navbar.Brand href="#home">Kayte</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
+          <Navbar.Collapse id="responsive-navbar-nav" >
+            <Nav className="me-auto ">
               <Nav.Link href="/">About</Nav.Link>
               <Nav.Link href="/projects">Projects</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
@@ -48,12 +48,12 @@ function App() {
         </Container>
       </Navbar>
       <BrowserRouter>
-      <Routes>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </BrowserRouter> 
+      </BrowserRouter>
       {/* <BrowserRouter>
         <nav>
           {(toggleMenu || screenWidth > 500) && (
