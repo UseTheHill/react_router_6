@@ -23,7 +23,7 @@ export default function Home() {
     <Container className={styles.home_inner_container}>
       <Row className={styles.home_row1}>
         <Col>
-          <h1>My Blogs</h1>
+          <h1>Welcome to Sofia's Blog</h1>
         </Col>
       </Row>
     </Container>

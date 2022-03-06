@@ -40,10 +40,14 @@ function App() {
             <Navbar.Brand href="#home">Kayte</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto ">
-                <Nav.Link className="km_navlinks" href="/">Home</Nav.Link>
+              <Nav className="ms-auto">
+                <Nav.Link className="km_navlinks" href="/">
+                  Home
+                </Nav.Link>
                 {/* <Nav.Link href="/bloglist">Blog</Nav.Link> */}
-                <Nav.Link  className="km_navlinks" href="/contact">Contact</Nav.Link>
+                <Nav.Link className="km_navlinks" href="/contact">
+                  Contact
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
