@@ -34,27 +34,29 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar bg="dark" variant="dark" expand="sm">
-        <Container>
-          <Navbar.Brand href="#home">Kayte</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto ">
-              <Nav.Link href="/">Home</Nav.Link>
-              {/* <Nav.Link href="/bloglist">Blog</Nav.Link> */}
-              <Nav.Link href="/contact">Contact</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/bloglist" element={<BlogList />} /> */}
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-      {/* <BrowserRouter>
+      <Container className="fluid-container">
+        <Navbar className="home_navbar" variant="dark" expand="sm">
+          <Container>
+            <Navbar.Brand href="#home">Kayte</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto ">
+                <Nav.Link className="km_navlinks" href="/">Home</Nav.Link>
+                {/* <Nav.Link href="/bloglist">Blog</Nav.Link> */}
+                <Nav.Link  className="km_navlinks" href="/contact">Contact</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/bloglist" element={<BlogList />} /> */}
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+        {/* <BrowserRouter>
         <nav>
           {(toggleMenu || screenWidth > 500) && (
             <ul className="list">
@@ -85,6 +87,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter> */}
+      </Container>
     </div>
   );
 }

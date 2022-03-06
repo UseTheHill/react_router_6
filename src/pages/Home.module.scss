@@ -1,11 +1,20 @@
 @import "../variables.scss";
-.home_container {
-  height: 100%;
-}
 
+.home_inner_container {
+  background: $bg;
+  max-width: 1920px !important;
+  margin: 0 auto;
+  border: 1px solid rgb(231, 142, 142);
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .home_row1 {
+  width: 80%;
   justify-content: center;
   color: $text1;
-  font-size: 3rem;
-  padding-top: 50px;
+  border: 1px solid grey;
+}
+.hero_banner {
 }

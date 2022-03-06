@@ -1,75 +1,21 @@
 @import "./variables.scss";
-
-.km-collapse {
-  justify-content: end;
+.fluid-container {
+  max-width: 1920px !important;
 }
-// .App {
-//   background-color: $bg;
-// }
-// container {
-//   max-width: 1920px;
-// }
-// nav {
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   height: 50px;
-//   z-index: 9999;
-//   background: linear-gradient(180deg, #274472, #41729f);
-//   color: white;
-// }
-
-// .list {
-//   list-style-type: none;
-//   background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: relative;
-// }
-// .items {
-//   margin-right: 20px;
-//   font-size: 20px;
-//   text-transform: uppercase;
-//   text-decoration: none;
-
-//   color: #f1f1f1;
-//   cursor: pointer;
-// }
-
-// .kt_btn {
-//   display: none;
-//   position: absolute;
-//   right: 10px;
-//   top: 7px;
-//   padding: 5px;
-//   color: #000;
-//   font-size: 18px;
-// }
-
-// @media screen and (max-width: 500px) {
-//   //   nav {
-//   //     transition:ease-out;
-//   //   }
-//   .list {
-//     flex-direction: column;
-//     height: auto;
-//     margin-top: 50px;
-//     border-top: 1px solid rgba(255, 255, 255, 0.555);
-//     background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
-//   }
-
-//   .items {
-//     width: 100%;
-//     margin-top: 50px;
-//     background: transparent;
-//     text-align: center;
-//     margin-right: 0px;
-//     padding: 20px 0;
-//     text-decoration: none;
-//   }
-//   .kt_btn {
-//     display: block;
-//   }
-// }
+.home_navbar {
+  background: linear-gradient(90deg, #03bbf3, #0268ac);
+}
+#root > div > div > nav > div {
+  width: 80%;
+}
+.km_navlinks {
+  border-left: 1px solid #d5de3a;
+}
+.km_navlinks:first-child {
+  border: 0;
+}
+@media (max-width: 576px) {
+  .km_navlinks {
+    border: 0;
+  }
+}
